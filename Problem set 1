@@ -1,0 +1,47 @@
+test = read.dta("bushapproval.dta")
+test
+View(test)
+summary(test$bush)
+fivenumsum = function(a){
+  stand = sd(a)
+  mn = mean(a)
+  med = median(a)
+  interquar = IQR(a)
+  vari = var(a)
+  sumar = summary(a)
+  five.num = (c(stand,mn,med,interquar,vari))
+  names(five.num) = c("standard deviation","mean", "median", "interquartile range", "variance")
+  
+  return(c(five.num,sumar))
+  
+}
+View(fivenumsum(test$bush))
+
+type(five.num)
+tzvi = ifelse(test$year == "2001", 1, 0)
+thank = ifelse(test$year == "2001", test$bush,0)
+sum(thank)/sum(tzvi)
+sum(tzvi)
+test$year == "2001"
+?ifelse
+subseq = ifelse(test$year == "2001",0,1)
+subseq.me = ifelse(test$year == "2001", 0, test$bush )
+subseq.me2008 = ifelse(test$year == "2008", test$bush,0 )
+hist(test$bush)
+boxplot(test$bush)
+first.year = ifelse(test$year == "2001",test$bush,0)
+second.year = ifelse(test$year == "2002",test$bush,0)
+third.year = ifelse(test$year == "2003",test$bush,0)
+fourth.year = ifelse(test$year == "2004",test$bush,0)
+
+first.term= first.year+second.year+third.year+fourth.year
+first.te = na.omit(first.term)
+na.omit(first.term)
+boxplot(first.term, col = "purple")
+?which
+which(first.term == "0")]
+first.term[first.term == 0] = NA
+k = na.omit(first.term)
+boxplot(k)
+else{if(test$year == "2002"){test$bush}}
+
