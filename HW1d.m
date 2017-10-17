@@ -16,7 +16,8 @@ ans = M.*M
      %1     1     1     1
      %1     1     1     1
     
-     
+     %This is the squared matrix because this is what M^2 looks like after
+     %we do singular value decomoposition and square it's eigenvalues. 
      
      
  for i = 1:4
@@ -95,6 +96,8 @@ newmat
 
 uno = ones(1,30)
 uno*newmat
-
+%ans = -12
+%Depending on the random vector U, the dot product of U and vector J, where
+%J is all ones, will either be zero, positive, or negative. 
 
 
